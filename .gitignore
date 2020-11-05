@@ -1,0 +1,9 @@
+.vscode
+*.vcxproj
+*.vcxproj.*
+*.exe
+*.ilk
+*.obj
+*.pdb
+Debug/*
+Release/*
