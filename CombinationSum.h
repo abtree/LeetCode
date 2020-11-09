@@ -28,14 +28,39 @@ private:
 	vector<vector<int>> mRet;
 public:
 	vector<vector<int>> combinationSum2(vector<int>& candidates, int target) {
-		//回溯法
+		//回溯法(不用大量拷贝set)
 		mRet.clear();
-		
+		vector<int> set;
+		for (int i = 0; i < candidates.size(); ++i) {
+			Sum2(set, 0, i, candidates, target);
+		}
+		return mRet;
+	}
+private:
+	void Sum2(vector<int>& set, int sum, int pos, vector<int>& candidates, int target) {
+		set.push_back(candidates[pos]);
+		sum += candidates[pos];
+		if (sum == target) {
+			mRet.push_back(set);
+			set.pop_back();
+			sum -= candidates[pos];
+			return;
+		}
+		if (sum > target) {
+			set.pop_back();
+			sum -= candidates[pos];
+			return;
+		}
+		for (int i = pos; i < candidates.size(); ++i) {
+			Sum2(set, sum, i, candidates, target);
+		}
+		set.pop_back();
+		sum -= candidates[pos];
 	}
 public:
 	static void Test() {
 		CombinationSum cls;
-		vector<vector<int>> ret = cls.combinationSum(vector<int>{2, 3, 6, 7}, 7);
+		vector<vector<int>> ret = cls.combinationSum2(vector<int>{2, 3, 6, 7}, 7);
 		cout << "[" << endl;
 		for (auto &it : ret) {
 			cout << "[";
@@ -46,7 +71,7 @@ public:
 		}
 		cout << "]" << endl;
 
-		ret = cls.combinationSum(vector<int>{2, 3, 5}, 8);
+		ret = cls.combinationSum2(vector<int>{2, 3, 5}, 8);
 		cout << "[" << endl;
 		for (auto &it : ret) {
 			cout << "[";

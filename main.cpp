@@ -52,6 +52,7 @@ using namespace std;
 #include "SolveSudoku2.h"			//37. 解数独
 #include "CountAndSay.h"			//38. 外观数列
 #include "CombinationSum.h"			//39. 组合总和
+#include "CombinationSum2.h"		//40 组合总和 II
 
 void group1(int typ) {
 	switch (typ)
@@ -200,6 +201,9 @@ void group4(int val) {
 	case 9:
 		CombinationSum::Test();
 		break;
+	case 10:
+		CombinationSum2::Test();
+		break;
 	default:
 		break;
 	}
@@ -209,7 +213,7 @@ int main() {
 	//group1(0);
 	//group2(0);
 	//group3(0);
-	group4(9);
+	group4(10);
 
 	return 0;
 }
