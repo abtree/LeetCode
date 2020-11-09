@@ -53,6 +53,7 @@ using namespace std;
 #include "CountAndSay.h"			//38. 外观数列
 #include "CombinationSum.h"			//39. 组合总和
 #include "CombinationSum2.h"		//40 组合总和 II
+#include "FirstMissingPositive.h"	//41. 缺失的第一个正数
 
 void group1(int typ) {
 	switch (typ)
@@ -209,11 +210,23 @@ void group4(int val) {
 	}
 }
 
+void group5(int val) {
+	switch (val)
+	{
+	case 0:
+		FirstMissingPositive::Test();
+		break;
+	default:
+		break;
+	}
+}
+
 int main() {
 	//group1(0);
 	//group2(0);
 	//group3(0);
-	group4(10);
+	//group4(10);
+	group5(0);
 
 	return 0;
 }
