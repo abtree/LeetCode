@@ -57,11 +57,6 @@ using namespace std;
 #include "TrapRainWater.h"			//42. 接雨水
 #include "MultiplyStrings.h"		//43. 字符串相乘
 #include "WildcardMatch.h"			//44. 通配符匹配
-#include "JumpGame2.h"				//45. 跳跃游戏 II
-#include "Permutations.h"			//46. 全排列
-#include "Permutation2.h"			//47. 全排列 II
-#include "RotateImage.h"			//48. 旋转图像
-#include "GroupAnagrams.h"			//49. 字母异位词分组
 
 void group1(int typ) {
 	switch (typ)
@@ -139,7 +134,7 @@ void group2(int typ) {
 	}
 }
 
-void group3(int val) {
+void group3(int val){
 	switch (val)
 	{
 	case 1:
@@ -148,9 +143,9 @@ void group3(int val) {
 	case 2:
 		CGenerateParenthesis::Test();
 		break;
-	case 3:
-		CMergeKLists::Test();
-		break;
+	 case 3:
+	 	CMergeKLists::Test();
+	 	break;
 	case 4:
 		CSwapPairs::Test();
 		break;
@@ -230,23 +225,8 @@ void group5(int val) {
 	case 2:
 		CMultiplyStrings::Test();
 		break;
-	case 3:
-		WildcardMatch::Test();
-		break;
-	case 4:
-		JumpGame2::Test();
-		break;
-	case 5:
-		Permutations::Test();
-		break;
-	case 6:
-		Permutation2::Test();
-		break;
-	case 7:
-		CRotateImage::Test();
-		break;
-	case 8:
-		CGroupAnagrams::Test();
+	case 2:
+		CMultiplyStrings::Test();
 		break;
 	default:
 		break;
@@ -258,7 +238,7 @@ int main() {
 	//group2(0);
 	//group3(0);
 	//group4(10);
-	group5(8);
+	group5(2);
 
 	return 0;
 }
