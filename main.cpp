@@ -62,6 +62,10 @@ using namespace std;
 #include "Permutation2.h"			//47. 全排列 II
 #include "RotateImage.h"			//48. 旋转图像
 #include "GroupAnagrams.h"			//49. 字母异位词分组
+#include "Powxn.h"					//50. Pow(x, n)
+#include "NQueens.h"				//51. N 皇后
+#include "MaxSubarray.h"			//53. 最大子序和
+#include "SpiralMatrix.h"			//54. 螺旋矩阵
 
 void group1(int typ) {
 	switch (typ)
@@ -248,6 +252,26 @@ void group5(int val) {
 	case 8:
 		CGroupAnagrams::Test();
 		break;
+	case 9:
+		CPowxn::Test();
+		break;
+	case 10:
+		NQueens::Test();
+		break;
+	default:
+		break;
+	}
+}
+
+void group6(int val) {
+	switch (val)
+	{
+	case 0:
+		MaxSubarray::Test();
+		break;
+	case 1:
+		SpiralMatrix::Test();
+		break;
 	default:
 		break;
 	}
@@ -258,7 +282,8 @@ int main() {
 	//group2(0);
 	//group3(0);
 	//group4(10);
-	group5(8);
+	//group5(10);
+	group6(1);
 
 	return 0;
 }
