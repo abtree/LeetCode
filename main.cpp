@@ -66,6 +66,11 @@ using namespace std;
 #include "NQueens.h"				//51. N 皇后
 #include "MaxSubarray.h"			//53. 最大子序和
 #include "SpiralMatrix.h"			//54. 螺旋矩阵
+#include "JumpGame.h"				//55. 跳跃游戏
+#include "MergeIntervals.h"			//56. 合并区间
+#include "InsertInterval.h"			//57. 插入区间
+#include "LenOfLastWord.h"			//58. 最后一个单词的长度
+#include "SpiralMatrix2.h"			//59. 螺旋矩阵 II
 
 void group1(int typ) {
 	switch (typ)
@@ -272,6 +277,21 @@ void group6(int val) {
 	case 1:
 		SpiralMatrix::Test();
 		break;
+	case 2:
+		CJumpGame::Test();
+		break;
+	case 3:
+		MergeIntervals::Test();
+		break;
+	case 4:
+		InsertInterval::Test();
+		break;
+	case 5:
+		LenOfLastWord::Test();
+		break;
+	case 6:
+		SpiralMatrix2::Test();
+		break;
 	default:
 		break;
 	}
@@ -283,7 +303,7 @@ int main() {
 	//group3(0);
 	//group4(10);
 	//group5(10);
-	group6(1);
+	group6(6);
 
 	return 0;
 }
