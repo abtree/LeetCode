@@ -71,6 +71,9 @@ using namespace std;
 #include "InsertInterval.h"			//57. 插入区间
 #include "LenOfLastWord.h"			//58. 最后一个单词的长度
 #include "SpiralMatrix2.h"			//59. 螺旋矩阵 II
+#include "PermutationSequence.h"	//60. 排列序列
+#include "RotateList.h"				//61. 旋转链表
+#include "UniquePaths.h"			//62. 不同路径
 
 void group1(int typ) {
 	switch (typ)
@@ -292,6 +295,15 @@ void group6(int val) {
 	case 6:
 		SpiralMatrix2::Test();
 		break;
+	case 7:
+		PermutationSequence::Test();
+		break;
+	case 8:
+		RotateList::Test();
+		break;
+	case 9:
+		UniquePaths::Test();
+		break;
 	default:
 		break;
 	}
@@ -303,7 +315,7 @@ int main() {
 	//group3(0);
 	//group4(10);
 	//group5(10);
-	group6(6);
+	group6(9);
 
 	return 0;
 }
