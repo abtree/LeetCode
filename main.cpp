@@ -9,6 +9,7 @@
 #include <array>
 #include <bitset>
 #include <set>
+#include<cctype>
 
 using namespace std;
 
@@ -74,6 +75,15 @@ using namespace std;
 #include "PermutationSequence.h"	//60. 排列序列
 #include "RotateList.h"				//61. 旋转链表
 #include "UniquePaths.h"			//62. 不同路径
+#include "UniquePaths2.h"			//63. 不同路径 II
+#include "MinimumPathSum.h"			//64. 最小路径和
+#include "ValidNumber.h"			//65. 有效数字
+#include "PlusOne.h"				//66. 加一
+#include "AddBinary.h"				//67. 二进制求和
+#include "TextJustification.h"		//68. 文本左右对齐
+//69. x 的平方根
+//70. 爬楼梯
+//71. 简化路径
 
 void group1(int typ) {
 	switch (typ)
@@ -304,6 +314,32 @@ void group6(int val) {
 	case 9:
 		UniquePaths::Test();
 		break;
+	case 10:
+		UniquePaths2::Test();
+		break;
+	default:
+		break;
+	}
+}
+
+void group7(int val) {
+	switch (val)
+	{
+	case 0:
+		MinimumPathSum::Test();
+		break;
+	case 1:
+		VaildNumber::Test();
+		break;
+	case 2:
+		CPlusOne::Test();
+		break;
+	case 3:
+		AddBinary::Test();
+		break;
+	case 4:
+		TextJustification::Test();
+		break;
 	default:
 		break;
 	}
@@ -315,7 +351,8 @@ int main() {
 	//group3(0);
 	//group4(10);
 	//group5(10);
-	group6(9);
+	//group6(10);
+	group7(4);
 
 	return 0;
 }
