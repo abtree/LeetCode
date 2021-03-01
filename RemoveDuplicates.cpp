@@ -1,4 +1,7 @@
-#pragma once
+﻿#pragma once
+#include <iostream>
+#include <vector>
+using namespace std;
 
 //26. 删除排序数组中的重复项
 class CRemoveDuplicates {
@@ -31,23 +34,24 @@ public:
 		}
 		return ret + 1;
 	}
-public:
-	static void Test() {
-		CRemoveDuplicates cls;
-		vector<int> arr1{ 1,1,2 };
-		int ret = cls.removeDuplicates(arr1);
-		cout << ret << "->";
-		for (auto i : arr1) {
-			cout << i << " ";
-		}
-		cout << endl;
-
-		vector<int> arr2{ 0,0,1,1,1,2,2,3,3,4 };
-		ret = cls.removeDuplicates(arr2);
-		cout << ret << "->";
-		for (auto i : arr2) {
-			cout << i << " ";
-		}
-		cout << endl;
-	}
 };
+
+int main(){
+	CRemoveDuplicates cls;
+	vector<int> arr1{ 1,1,2 };
+	int ret = cls.removeDuplicates(arr1);
+	cout << ret << "->";
+	for (auto i : arr1) {
+		cout << i << " ";
+	}
+	cout << endl;
+
+	vector<int> arr2{ 0,0,1,1,1,2,2,3,3,4 };
+	ret = cls.removeDuplicates(arr2);
+	cout << ret << "->";
+	for (auto i : arr2) {
+		cout << i << " ";
+	}
+	cout << endl;
+	return 0;
+}
