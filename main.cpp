@@ -23,7 +23,7 @@ using namespace std;
 #include "Atoi.h"					//8 字符串转换整数 (atoi)
 #include "IsPalindrome.h"			//9 回文数
 #include "Regex.h"					//10 正则表达式匹配
-#include "MaxArea.h"				//11 盛最多水的容器
+//#include "MaxArea.h"				//11 盛最多水的容器
 #include "IntToRoman.h"				//12 整数转罗马数字
 #include "RomanToInt.h"				//13 罗马数字转整数
 #include "LongestComPrefix.h"		//14 最长公共前缀
@@ -38,14 +38,14 @@ using namespace std;
 #include "MergeKLists.h"			//23 合并K个升序链表
 #include "SwapPairs.h"				//24 两两交换链表中的节点
 #include "ReverseKGroup.h"			//25. K 个一组翻转链表
-#include "RemoveDuplicates.h"		//26. 删除排序数组中的重复项
+//#include "RemoveDuplicates.h"		//26. 删除排序数组中的重复项
 #include "RemoveElement.h"			//27. 移除元素
 #include "StrStr.h"					//28. 实现 strStr()
 #include "Divide.h"					//29. 两数相除
 #include "FindSubString.h"			//30. 串联所有单词的子串
 #include "NextPermutation.h"		//31. 下一个排列
 #include "LongestValidParentheses.h"	//32. 最长有效括号
-#include "SearchInRotatedSortedArray.h" //33 搜索旋转排序数组
+//#include "SearchInRotatedSortedArray.h" //33 搜索旋转排序数组
 #include "SearchRange.h"			//34 在排序数组中查找元素的第一个和最后一个位置
 #include "SearchInsert.h"			//35 搜索插入位置
 #include "ValidSudoku.h"			//36 有效的数独
@@ -55,7 +55,7 @@ using namespace std;
 #include "CombinationSum.h"			//39. 组合总和
 #include "CombinationSum2.h"		//40 组合总和 II
 #include "FirstMissingPositive.h"	//41. 缺失的第一个正数
-#include "TrapRainWater.h"			//42. 接雨水
+//#include "TrapRainWater.h"			//42. 接雨水
 #include "MultiplyStrings.h"		//43. 字符串相乘
 #include "WildcardMatch.h"			//44. 通配符匹配
 #include "JumpGame2.h"				//45. 跳跃游戏 II

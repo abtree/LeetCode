@@ -1,5 +1,10 @@
 ﻿#pragma once
 
+#include <iostream>
+#include <vector>
+
+using namespace std;
+
 //33 搜索旋转排序数组
 class CSearchRotatedSortedArray {
 	/*
@@ -85,13 +90,15 @@ private:
 		else 
 			return search(nums, target, mid + 1, end);
 	}
-public:
-	static void Test() {
-		CSearchRotatedSortedArray cls;
-		cout << cls.search(vector<int>{282, 283, 290, 295, 296, 297, 298, 1, 7, 8, 9, 11, 12, 15, 17, 21, 27, 28, 38, 43, 45, 50, 51, 52, 55, 59, 61, 66, 75, 82, 84, 85, 86, 87, 96, 101, 103, 105, 114, 117, 119, 120, 122, 123, 132, 138, 140, 145, 151, 152, 156, 157, 159, 163, 164, 165, 170, 172, 184, 187, 188, 189, 190, 193, 201, 204, 205, 206, 208, 215, 216, 217, 225, 232, 234, 241, 244, 248, 249, 252, 261, 262, 264, 265, 268, 271, 272, 279, 280}, 102) << " -> -1" << endl;
-		cout << cls.search(vector<int>{3,1}, 1) << " -> 1" << endl;
-		cout << cls.search(vector<int>{4, 5, 6, 7, 0, 1, 2}, 0) << " -> 4" << endl;
-		cout << cls.search(vector<int>{4, 5, 6, 7, 0, 1, 2}, 3) << " -> -1" << endl;
-		cout << cls.search(vector<int>{1}, 0) << " -> -1" << endl;
-	}
 };
+
+int main() {
+	CSearchRotatedSortedArray cls;
+	cout << cls.search(vector<int>{282, 283, 290, 295, 296, 297, 298, 1, 7, 8, 9, 11, 12, 15, 17, 21, 27, 28, 38, 43, 45, 50, 51, 52, 55, 59, 61, 66, 75, 82, 84, 85, 86, 87, 96, 101, 103, 105, 114, 117, 119, 120, 122, 123, 132, 138, 140, 145, 151, 152, 156, 157, 159, 163, 164, 165, 170, 172, 184, 187, 188, 189, 190, 193, 201, 204, 205, 206, 208, 215, 216, 217, 225, 232, 234, 241, 244, 248, 249, 252, 261, 262, 264, 265, 268, 271, 272, 279, 280}, 102) << " -> -1" << endl;
+	cout << cls.search(vector<int>{3,1}, 1) << " -> 1" << endl;
+	cout << cls.search(vector<int>{4, 5, 6, 7, 0, 1, 2}, 0) << " -> 4" << endl;
+	cout << cls.search(vector<int>{4, 5, 6, 7, 0, 1, 2}, 3) << " -> -1" << endl;
+	cout << cls.search(vector<int>{1}, 0) << " -> -1" << endl;
+
+	return 0;
+}
