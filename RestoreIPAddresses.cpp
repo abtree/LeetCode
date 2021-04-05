@@ -32,8 +32,50 @@ class RestoreIPAddresses
     */
 public:
     vector<string> restoreIpAddresses(string s) {
-
+        segs.resize(SEG_CNT);
+        check(s, 0, 0);
+        return ans;
     }
+private:
+    void check(string& s, int seg, int pos){
+        //seg已经到最后了
+        if(seg == SEG_CNT){
+            if(pos == s.size()){
+                //满足条件
+                string ip = "";
+                for(auto i : segs){
+                    ip += to_string(i)+'.';
+                }
+                ip.pop_back();
+                ans.push_back(std::move(ip));
+            }else{
+                return; //不满足条件
+            }
+        }
+        if(pos == s.size())
+            return; //已经没有可分配的数字了
+        if(s[pos] == '0'){
+            segs[seg] = 0;
+            check(s, seg+1, pos+1);
+            return; //这段只能是0
+        }
+        int sec = 0;
+        for(int c = pos; c < pos+3 && c < s.size();++c){    //常规情况 最多向后验证3位
+            sec = sec*10 + (s[c]-'0');
+            if(sec <= 0xFF){
+                segs[seg] = sec;
+                check(s, seg+1, c+1);
+            }
+        }
+    }
+public:
+    void Clear(){
+        ans.clear();
+    }
+private:
+    static constexpr int SEG_CNT = 4; //ip地址的段数
+    vector<int> segs;   //存放每一段ip的值
+    vector<string> ans; //存放答案(满足条件的Ip)
 };
 
 int main(int argc, char const* argv[])
@@ -45,6 +87,7 @@ int main(int argc, char const* argv[])
         cout << it.c_str() << ",";
     }
     cout << "]" << endl;
+    cls.Clear();
 
     auto& ret1 = cls.restoreIpAddresses("0000");
     cout << "[";
@@ -52,6 +95,7 @@ int main(int argc, char const* argv[])
         cout << it.c_str() << ",";
     }
     cout << "]" << endl;
+    cls.Clear();
 
     auto& ret2 = cls.restoreIpAddresses("1111");
     cout << "[";
@@ -59,6 +103,7 @@ int main(int argc, char const* argv[])
         cout << it.c_str() << ",";
     }
     cout << "]" << endl;
+    cls.Clear();
 
     auto& ret3 = cls.restoreIpAddresses("010010");
     cout << "[";
@@ -66,6 +111,7 @@ int main(int argc, char const* argv[])
         cout << it.c_str() << ",";
     }
     cout << "]" << endl;
+    cls.Clear();
 
     auto& ret4 = cls.restoreIpAddresses("101023");
     cout << "[";
@@ -73,6 +119,7 @@ int main(int argc, char const* argv[])
         cout << it.c_str() << ",";
     }
     cout << "]" << endl;
+    cls.Clear();
 
     return 0;
 }
