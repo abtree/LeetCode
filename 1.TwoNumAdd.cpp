@@ -1,4 +1,8 @@
-#pragma once
+#include <iostream>
+#include <vector>
+#include <unordered_map>
+
+using namespace std;
 
 //1 两数之和
 class CTwoNumAdd {
@@ -47,31 +51,31 @@ public:
 		}
 		return vector<int>{};
 	}
+};
 
-public:
-	//测试
-	static void Test() {
-		int typ = 1;
+int main(int argc, char const *argv[])
+{
+	int typ = 1;
 
-		vector<int> nums{ 2, 7, 4, 11, 15, 4 };
-		CTwoNumAdd two;
-		if (typ == 1) {
-			auto ret = two.twoSum2(nums, 8);
-			if (!ret.empty(), ret.size() == 2) {
-				cout << ret[0] << " " << ret[1] << endl;
-			}
-			else {
-				cout << "ret is empty" << endl;
-			}
+	vector<int> nums{ 2, 7, 4, 11, 15, 4 };
+	CTwoNumAdd two;
+	if (typ == 1) {
+		auto ret = two.twoSum2(nums, 8);
+		if (!ret.empty(), ret.size() == 2) {
+			cout << ret[0] << " " << ret[1] << endl;
 		}
 		else {
-			auto ret = two.twoSum2(nums, 8);
-			if (!ret.empty(), ret.size() == 2) {
-				cout << ret[0] << " " << ret[1] << endl;
-			}
-			else {
-				cout << "ret is empty" << endl;
-			}
+			cout << "ret is empty" << endl;
 		}
 	}
-};
+	else {
+		auto ret = two.twoSum2(nums, 8);
+		if (!ret.empty(), ret.size() == 2) {
+			cout << ret[0] << " " << ret[1] << endl;
+		}
+		else {
+			cout << "ret is empty" << endl;
+		}
+	}
+	return 0;
+}
