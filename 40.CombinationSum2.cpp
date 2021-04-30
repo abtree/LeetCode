@@ -1,4 +1,8 @@
-﻿#pragma once
+﻿#include <iostream>
+#include <vector>
+#include <unordered_map>
+
+using namespace std;
 
 //40 组合总和 II
 class CombinationSum2 {
@@ -75,29 +79,31 @@ private:
 	}
 private:
 	vector<vector<int>> mRet;
-public:
-	static void Test() {
-		CombinationSum2 cls;
-		vector<vector<int>> ret = cls.combinationSum(vector<int>{10, 1, 2, 7, 6, 1, 5}, 8);
-		cout << "[" << endl;
-		for (auto &it : ret) {
-			cout << "[";
-			for (auto it1 : it) {
-				cout << " " << it1;
-			}
-			cout << "]" << endl;
-		}
-		cout << "]" << endl;
+};
 
-		ret = cls.combinationSum(vector<int>{2, 5, 2, 1, 2}, 5);
-		cout << "[" << endl;
-		for (auto &it : ret) {
-			cout << "[";
-			for (auto it1 : it) {
-				cout << " " << it1;
-			}
-			cout << "]" << endl;
+int main(int argc, char const *argv[])
+{
+	CombinationSum2 cls;
+	vector<vector<int>> ret = cls.combinationSum(vector<int>{10, 1, 2, 7, 6, 1, 5}, 8);
+	cout << "[" << endl;
+	for (auto &it : ret) {
+		cout << "[";
+		for (auto it1 : it) {
+			cout << " " << it1;
 		}
 		cout << "]" << endl;
 	}
-};
+	cout << "]" << endl;
+
+	ret = cls.combinationSum(vector<int>{2, 5, 2, 1, 2}, 5);
+	cout << "[" << endl;
+	for (auto &it : ret) {
+		cout << "[";
+		for (auto it1 : it) {
+			cout << " " << it1;
+		}
+		cout << "]" << endl;
+	}
+	cout << "]" << endl;
+	return 0;
+}

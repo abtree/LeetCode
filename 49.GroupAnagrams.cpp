@@ -1,4 +1,10 @@
-﻿#pragma once
+﻿#include <iostream>
+#include <vector>
+#include <string>
+#include <algorithm>
+#include <unordered_map>
+
+using namespace std;
 
 //49. 字母异位词分组
 class CGroupAnagrams {
@@ -31,19 +37,21 @@ public:
         }
         return ret;
     }
-public:
-    static void Test() {
-        vector<string> dat{ "eat", "tea", "tan", "ate", "nat", "bat" };
-        CGroupAnagrams cls;
-        auto ret = cls.groupAnagrams(dat);
-        cout << "[" << endl;
-        for (auto& it : ret) {
-            cout << "[";
-            for (auto& it2 : it) {
-                cout << it2.c_str() << ",";
-            }
-            cout << "]" << endl;
+};
+
+int main(int argc, char const* argv[])
+{
+    vector<string> dat{ "eat", "tea", "tan", "ate", "nat", "bat" };
+    CGroupAnagrams cls;
+    auto ret = cls.groupAnagrams(dat);
+    cout << "[" << endl;
+    for (auto& it : ret) {
+        cout << "[";
+        for (auto& it2 : it) {
+            cout << it2.c_str() << ",";
         }
         cout << "]" << endl;
     }
-};
+    cout << "]" << endl;
+    return 0;
+}

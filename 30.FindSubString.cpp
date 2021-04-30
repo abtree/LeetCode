@@ -1,4 +1,9 @@
-#pragma once
+#include <iostream>
+#include <string>
+#include <vector>
+#include <unordered_map>
+
+using namespace std;
 
 //30. 串联所有单词的子串
 class CFindSubString{
@@ -57,28 +62,30 @@ private:
 		}
 		return 0;
 	}
-public:
-    static void Test(){
-        CFindSubString cls;
-		auto ret2 = cls.findSubstring("wordgoodgoodgoodbestword", vector<string>{"word", "good", "best", "good"});
-		cout << "[";
-		for (auto& it2 : ret2) {
-			cout << it2 << " ";
-		}
-		cout << "]" << endl;
-
-        auto ret = cls.findSubstring("barfoothefoobarman", vector<string>{"foo", "bar"});
-		cout << "[";
-        for(auto& it : ret){
-            cout << it << " ";
-        }
-        cout << "]" << endl;
-
-		auto ret1 = cls.findSubstring("wordgoodgoodgoodbestword", vector<string>{"word", "good", "best", "word"});
-		cout << "[";
-		for (auto& it1 : ret1) {
-			cout << it1 << " ";
-		}
-		cout << "]" << endl;
-    }
 };
+
+int main(int argc, char const *argv[])
+{
+	CFindSubString cls;
+	auto ret2 = cls.findSubstring("wordgoodgoodgoodbestword", vector<string>{"word", "good", "best", "good"});
+	cout << "[";
+	for (auto& it2 : ret2) {
+		cout << it2 << " ";
+	}
+	cout << "]" << endl;
+
+	auto ret = cls.findSubstring("barfoothefoobarman", vector<string>{"foo", "bar"});
+	cout << "[";
+	for(auto& it : ret){
+		cout << it << " ";
+	}
+	cout << "]" << endl;
+
+	auto ret1 = cls.findSubstring("wordgoodgoodgoodbestword", vector<string>{"word", "good", "best", "word"});
+	cout << "[";
+	for (auto& it1 : ret1) {
+		cout << it1 << " ";
+	}
+	cout << "]" << endl;
+	return 0;
+}

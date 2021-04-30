@@ -1,6 +1,9 @@
-#pragma once
+#include <iostream>
+#include <vector>
 
-//39. ×éºÏ×ÜºÍ
+using namespace std;
+
+//39. ç»„åˆæ€»å’Œ
 class CombinationSum {
 public:
 	vector<vector<int>> combinationSum(vector<int>& candidates, int target) {
@@ -28,7 +31,7 @@ private:
 	vector<vector<int>> mRet;
 public:
 	vector<vector<int>> combinationSum2(vector<int>& candidates, int target) {
-		//»ØËİ·¨(²»ÓÃ´óÁ¿¿½±´set)
+		//å›æº¯æ³•(ä¸ç”¨å¤§é‡æ‹·è´set)
 		mRet.clear();
 		vector<int> set;
 		for (int i = 0; i < candidates.size(); ++i) {
@@ -57,30 +60,31 @@ private:
 		set.pop_back();
 		sum -= candidates[pos];
 	}
-public:
-	static void Test() {
-		CombinationSum cls;
-		vector<vector<int>> ret = cls.combinationSum2(vector<int>{2, 3, 6, 7}, 7);
-		cout << "[" << endl;
-		for (auto &it : ret) {
-			cout << "[";
-			for (auto it1 : it) {
-				cout << " " << it1;
-			}
-			cout << "]" << endl;
-		}
-		cout << "]" << endl;
-
-		ret = cls.combinationSum2(vector<int>{2, 3, 5}, 8);
-		cout << "[" << endl;
-		for (auto &it : ret) {
-			cout << "[";
-			for (auto it1 : it) {
-				cout << " " << it1;
-			}
-			cout << "]" << endl;
-		}
-		cout << "]" << endl;
-
-	}
 };
+
+int main(int argc, char const* argv[])
+{
+	CombinationSum cls;
+	vector<vector<int>> ret = cls.combinationSum2(vector<int>{2, 3, 6, 7}, 7);
+	cout << "[" << endl;
+	for (auto& it : ret) {
+		cout << "[";
+		for (auto it1 : it) {
+			cout << " " << it1;
+		}
+		cout << "]" << endl;
+	}
+	cout << "]" << endl;
+
+	ret = cls.combinationSum2(vector<int>{2, 3, 5}, 8);
+	cout << "[" << endl;
+	for (auto& it : ret) {
+		cout << "[";
+		for (auto it1 : it) {
+			cout << " " << it1;
+		}
+		cout << "]" << endl;
+	}
+	cout << "]" << endl;
+	return 0;
+}

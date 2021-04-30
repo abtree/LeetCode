@@ -1,4 +1,8 @@
-#pragma once
+#include <iostream>
+#include <string>
+#include <algorithm>
+
+using namespace std;
 
 //67. 二进制求和
 class AddBinary {
@@ -72,10 +76,12 @@ private:
             return ret;
         return ret + 1;
     }
-public:
-    static void Test() {
-        AddBinary cls;
-        cout << cls.addBinary("11", "1").c_str() << " -> 100" << endl;
-        cout << cls.addBinary("1010", "1011").c_str() << " -> 10101" << endl;
-    }
 };
+
+int main(int argc, char const *argv[])
+{
+    AddBinary cls;
+    cout << cls.addBinary("11", "1").c_str() << " -> 100" << endl;
+    cout << cls.addBinary("1010", "1011").c_str() << " -> 10101" << endl;
+    return 0;
+}

@@ -1,4 +1,8 @@
-﻿#pragma once
+﻿#include <iostream>
+#include <vector>
+#include <string>
+
+using namespace std;
 
 //22 括号生成
 class CGenerateParenthesis {
@@ -61,14 +65,16 @@ public:
 			generate2(item + ")", result, left, right - 1);
 		}
 	}
-public:
-	static void Test() {
-		CGenerateParenthesis cls;
-		auto ret = cls.generateParenthesis(3);
-		cout << "[" << endl;
-		for (auto &it : ret) {
-			cout << it.c_str() << endl;
-		}
-		cout << "]" << endl;
-	}
 };
+
+int main(int argc, char const *argv[])
+{
+	CGenerateParenthesis cls;
+	auto ret = cls.generateParenthesis(3);
+	cout << "[" << endl;
+	for (auto &it : ret) {
+		cout << it.c_str() << endl;
+	}
+	cout << "]" << endl;
+	return 0;
+}

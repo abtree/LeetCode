@@ -1,4 +1,6 @@
-﻿#pragma once
+﻿#include <iostream>
+
+using namespace std;
 
 //29. 两数相除
 class CDivide {
@@ -118,13 +120,15 @@ private:
 		}
 		return divide(dividend - divisor, next, add + ret);
 	}
-public:
-	static void Test() {
-		CDivide cls;
-		cout << cls.divide2(2147483647, 3) << " --> 2147483647" << endl;
-		cout << cls.divide2(-2147483648, -1) << " --> 2147483647" << endl;
-		cout << cls.divide2(-2147483648, 1) << " --> -2147483648" << endl;
-		cout << cls.divide2(10, 3) << " --> 3" << endl;
-		cout << cls.divide2(7, -3) << " --> -2" << endl;
-	}
 };
+
+int main(int argc, char const *argv[])
+{
+	CDivide cls;
+	cout << cls.divide2(2147483647, 3) << " --> 715827882" << endl;
+	cout << cls.divide2(-2147483648, -1) << " --> 2147483647" << endl;
+	cout << cls.divide2(-2147483648, 1) << " --> -2147483648" << endl;
+	cout << cls.divide2(10, 3) << " --> 3" << endl;
+	cout << cls.divide2(7, -3) << " --> -2" << endl;
+	return 0;
+}

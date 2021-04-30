@@ -1,4 +1,8 @@
-﻿#pragma once
+﻿#include <iostream>
+#include <vector>
+#include <algorithm>
+
+using namespace std;
 
 //18 四数之和
 class CFourSum {
@@ -60,18 +64,20 @@ public:
 		}
 		return ret;
 	}
-public:
-	static void Test() {
-		CFourSum cls;
-		auto& ret = cls.fourSum(vector<int>{1, 0, -1, 0, -2, 2}, 0);
-		cout << "[" << endl;
-		for (auto &line : ret) {
-			cout << "[";
-			for (auto i : line) {
-				cout << i << ",";
-			}
-			cout << "]" << endl;
+};
+
+int main(int argc, char const *argv[])
+{
+	CFourSum cls;
+	auto& ret = cls.fourSum(vector<int>{1, 0, -1, 0, -2, 2}, 0);
+	cout << "[" << endl;
+	for (auto &line : ret) {
+		cout << "[";
+		for (auto i : line) {
+			cout << i << ",";
 		}
 		cout << "]" << endl;
 	}
-};
+	cout << "]" << endl;
+	return 0;
+}

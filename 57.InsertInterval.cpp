@@ -1,4 +1,7 @@
-#pragma once
+#include <iostream>
+#include <vector>
+
+using namespace std;
 
 //57. 插入区间
 class InsertInterval {
@@ -61,32 +64,34 @@ public:
         ret.push_back(newInterval); //插在最后
         return ret;
     }
-public:
-    static void Test() {
-        InsertInterval cls;
-        vector<vector<int>> v1{
-            {1,3},
-            {6,9}
-        };
-        auto ret1 = cls.insert(v1, vector<int>{2, 5});
-        cout << "[" << endl;
-        for (auto& it : ret1) {
-            cout << "[" << it[0] << "," << it[1] << "]" << endl;
-        }
-        cout << "]" << endl;
-
-        vector<vector<int>> v2{
-            {1,2},
-            {3,5},
-            {6,7},
-            {8,10},
-            {12,16}
-        };
-        auto ret2 = cls.insert(v2, vector<int>{4, 8});
-        cout << "[" << endl;
-        for (auto& it : ret2) {
-            cout << "[" << it[0] << "," << it[1] << "]" << endl;
-        }
-        cout << "]" << endl;
-    }
 };
+
+int main(int argc, char const* argv[])
+{
+    InsertInterval cls;
+    vector<vector<int>> v1{
+        {1,3},
+        {6,9}
+    };
+    auto ret1 = cls.insert(v1, vector<int>{2, 5});
+    cout << "[" << endl;
+    for (auto& it : ret1) {
+        cout << "[" << it[0] << "," << it[1] << "]" << endl;
+    }
+    cout << "]" << endl;
+
+    vector<vector<int>> v2{
+        {1,2},
+        {3,5},
+        {6,7},
+        {8,10},
+        {12,16}
+    };
+    auto ret2 = cls.insert(v2, vector<int>{4, 8});
+    cout << "[" << endl;
+    for (auto& it : ret2) {
+        cout << "[" << it[0] << "," << it[1] << "]" << endl;
+    }
+    cout << "]" << endl;
+    return 0;
+}

@@ -1,4 +1,6 @@
-﻿#pragma once
+﻿#include <iostream>
+#include <string>
+using namespace std;
 
 //38. 外观数列
 class CountAndSay {
@@ -87,14 +89,16 @@ private:
 		ret.push_back(last);
 		return say(ret, n - 1);
 	}
-public:
-	static void Test() {
-		CountAndSay cls;
-		cout << cls.countAndSay2(1).c_str() << endl;
-		cout << cls.countAndSay2(2).c_str() << endl;
-		cout << cls.countAndSay2(3).c_str() << endl;
-		cout << cls.countAndSay2(4).c_str() << endl;
-		cout << cls.countAndSay2(5).c_str() << endl;
-		cout << cls.countAndSay2(6).c_str() << endl;
-	}
 };
+
+int main(int argc, char const *argv[])
+{
+	CountAndSay cls;
+	cout << cls.countAndSay2(1).c_str() << endl;
+	cout << cls.countAndSay2(2).c_str() << endl;
+	cout << cls.countAndSay2(3).c_str() << endl;
+	cout << cls.countAndSay2(4).c_str() << endl;
+	cout << cls.countAndSay2(5).c_str() << endl;
+	cout << cls.countAndSay2(6).c_str() << endl;
+	return 0;
+}

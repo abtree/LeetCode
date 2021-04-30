@@ -1,4 +1,7 @@
-#pragma once
+#include <iostream>
+#include <string>
+
+using namespace std;
 
 //6 Z 字形变换
 class Convert {
@@ -109,11 +112,13 @@ public:
 		}
 		return ret;
 	}
-public:
-	static void Test() {
-		string s = "LEETCODEISHIRING";
-		Convert c;
-		cout << c.convert1(s, 3) << " -> LCIRETOESIIGEDHN" << endl;
-		cout << c.convert1(s, 4) << " -> LDREOEIIECIHNTSG" << endl;
-	}
 };
+
+int main(int argc, char const *argv[])
+{
+	string s = "LEETCODEISHIRING";
+	Convert c;
+	cout << c.convert1(s, 3) << " -> LCIRETOESIIGEDHN" << endl;
+	cout << c.convert1(s, 4) << " -> LDREOEIIECIHNTSG" << endl;
+	return 0;
+}
