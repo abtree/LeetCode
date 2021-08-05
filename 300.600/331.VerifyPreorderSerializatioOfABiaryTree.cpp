@@ -4,6 +4,7 @@
 
 using namespace std;
 
+// 331. 验证二叉树的前序序列化
 class VerifyPreorderSerializatioOfABiaryTree {
 public:
     bool isValidSerialization(string preorder) {

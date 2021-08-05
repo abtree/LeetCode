@@ -33,6 +33,5 @@ int main(int argc, char const* argv[]) {
     cout << cls.minPatches(vector<int>{1, 3}, 6) << " -> 1" << endl;
     cout << cls.minPatches(vector<int>{1, 5, 10}, 20) << " -> 2" << endl;
     cout << cls.minPatches(vector<int>{1, 2, 2}, 5) << " -> 0" << endl;
-
     return 0;
 }
