@@ -1,0 +1,27 @@
+{
+    "configurations": [
+        {
+            "name": "Win32",
+            "includePath": [    //额外添加的头文件
+                "${workspaceFolder}/**",
+                "F:/msys64/mingw64/include/**",
+                "F:/msys64/mingw64/x86_64-w64-mingw32/include/**"
+            ],
+            // "browse": {      //设置额外的lib库
+            //     "path": [
+            //         "${workspaceRoot}"
+            //     ]
+            // },
+            "defines": [    //预先定义的宏
+                "_DEBUG",
+                "UNICODE",
+                "_UNICODE"
+            ],
+            "compilerPath": "F:/msys64/mingw64/bin/g++.exe",
+            "cStandard": "c17",
+            "cppStandard": "c++20",
+            "intelliSenseMode": "windows-gcc-x64"
+        }
+    ],
+    "version": 4
+}
