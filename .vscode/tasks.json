@@ -26,8 +26,8 @@
                 "-static-libgcc", // 静态链接
                 //"-fcolor-diagnostics",
                 //"--target=x86_64-w64-mingw", // 默认target为msvc，不加这一条就会找不到头文件
-                "-I 'F:/CppLib/include'",   //指定添加的include目录
-                "-L 'F:/CppLib/lib'", //指定添加的lib目录
+                //"-I 'F:/CppLib/include'",   //指定添加的include目录
+                //"-L 'F:/CppLib/lib'", //指定添加的lib目录
                 //"-D _DEBUG",    //定义预处理宏
                 "-m64",
                 "-std=c++2a" // C语言最新标准为c11，或根据自己的需要进行修改

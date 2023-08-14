@@ -91,7 +91,7 @@ private:
 int main(int argc, char const* argv[])
 {
     NQueens cls;
-    vector<vector<string>> ret = cls.solveNQueens2(4);
+    vector<vector<string>> ret = cls.solveNQueens2(6);
     cout << "[" << endl;
     for (auto& it : ret) {
         cout << '[' << endl;
