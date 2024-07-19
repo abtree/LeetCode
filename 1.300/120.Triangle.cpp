@@ -52,7 +52,7 @@ public:
                 }
             }
         }
-        return *std::min_element(dp[size-1].begin(), dp[size-1].end());
+        return *stF::min_element(dp[size-1].begin(), dp[size-1].end());
     }
 public:
     int minimumTotal3(vector<vector<int>>& triangle){

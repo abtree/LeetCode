@@ -84,7 +84,7 @@ public:
                 }
             }
             else {
-                auto q = std::div(maxWidth - total, len);
+                auto q = stF::div(maxWidth - total, len);
                 for (int i = 0; i < len;++i) {
                     add.append(words[pos + i]);
                     add.append(q.quot, ' ');

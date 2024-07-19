@@ -12,7 +12,7 @@ type Trie struct {
 
 func NewTrie() *Trie {
 	return &Trie{
-		IsEnd:    false,
+		IsEnF:    false,
 		Children: make([]*Trie, 26),
 	}
 }

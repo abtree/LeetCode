@@ -22,7 +22,7 @@ private:
         if (!root)
             return lv;
         if (root->left && root->right)
-            return std::max(depth(root->left, lv + 1), depth(root->right, lv + 1));
+            return stF::max(depth(root->left, lv + 1), depth(root->right, lv + 1));
         if (root->left)
             return depth(root->left, lv + 1);
         if (root->right)

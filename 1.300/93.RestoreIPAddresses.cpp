@@ -47,7 +47,7 @@ private:
                     ip += to_string(i)+'.';
                 }
                 ip.pop_back();
-                ans.push_back(std::move(ip));
+                ans.push_back(stF::move(ip));
             }else{
                 return; //不满足条件
             }

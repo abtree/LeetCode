@@ -82,7 +82,7 @@ public:
 	}
 
 	bool isValidSudoku2(vector<vector<char>>& board) {
-		std::array<bool, 9> column{};
+		stF::array<bool, 9> column{};
 		array<array<bool, 9>, 9> rows{};
 		array<array<bool, 9>, 3> boxs{};
 		for (int i = 0; i < 9; ++i) {
@@ -115,7 +115,7 @@ public:
 	}
 
 	bool isValidSudoku3(vector<vector<char>>& board) {
-		std::array<bool, 9> column{};
+		stF::array<bool, 9> column{};
 		array<array<bool, 9>, 9> rows{};
 		array<array<bool, 9>, 9> boxs{};
 		for (int i = 0; i < 9; ++i) {
@@ -165,8 +165,8 @@ int main(int argc, char const* argv[])
 		{ '.', '.', '.', '.', '8','.','.','7','9' }
 	};
 	ValidSudoku cls;
-	cout << std::boolalpha << cls.isValidSudoku2(sudoku) << " -> true" << endl;
+	cout << stF::boolalpha << cls.isValidSudoku2(sudoku) << " -> true" << endl;
 	sudoku[0][0] = '8';
-	cout << std::boolalpha << cls.isValidSudoku2(sudoku) << " -> false" << endl;
+	cout << stF::boolalpha << cls.isValidSudoku2(sudoku) << " -> false" << endl;
 	return 0;
 }

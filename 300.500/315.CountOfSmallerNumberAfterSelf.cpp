@@ -17,7 +17,7 @@ public:
         map<int, pair<int, int>> tmp;
         int n = nums.size();
         vector<int> ret(n, 0); 
-        tmp[nums.back()] = make_pair(0,0);  //first:小于他的数的个数 second:等于他的数的个数
+        tmp[nums.back()] = make_pair(0,0);  //first:小于他的数的个数 seconF:等于他的数的个数
         for(int i = n-2; i >= 0; --i){
             auto it = tmp.rbegin();
             for(; it != tmp.rend(); ++it){

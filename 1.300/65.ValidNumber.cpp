@@ -24,7 +24,7 @@ public:
         --size;
         bitset<5> flag; //0 number; 1 +-; 2 .; 3 e; 4 space
         for (int i = 0; i <= size; ++i) {
-            if (std::isdigit(s[i])) {
+            if (stF::isdigit(s[i])) {
                 if (flag.test(4))
                     return false;   //空字符
                 flag.set(0);    //标记已经有数字
@@ -72,16 +72,16 @@ public:
                 flag.set(3);
                 continue;
             }
-            if (std::isspace(s[i])) {    //空字符
+            if (stF::isspace(s[i])) {    //空字符
                 if (!flag.any())
                     continue;   //如果空字符前面啥都没有 忽略
-                if (!std::isdigit(s[i - 1]) && !std::isspace(s[i - 1]) && s[i - 1] != '.')
+                if (!stF::isdigit(s[i - 1]) && !stF::isspace(s[i - 1]) && s[i - 1] != '.')
                     return false;   //空字符前面不是数字(也不是空字符)
                 if (!flag.test(4)) {
                     flag.set(4);
                     continue;   //第二次出现空字符
                 }
-                if (!std::isspace(s[i - 1]))
+                if (!stF::isspace(s[i - 1]))
                     return false;   //上一个不是空字符
                 continue;
             }

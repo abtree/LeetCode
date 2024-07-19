@@ -10,7 +10,7 @@ public:
 		if (nums.size() < 3)
 			return vector<vector<int>>{};
 		//先排序
-		std::sort(nums.begin(), nums.end());
+		stF::sort(nums.begin(), nums.end());
 
 		vector<vector<int>> ret{};
 
@@ -30,7 +30,7 @@ public:
 				}
 				else {
 					vector<int>{nums[i], nums[j], nums[k] };
-					ret.push_back(std::move(vector<int>{nums[i], nums[j], nums[k] }));
+					ret.push_back(stF::move(vector<int>{nums[i], nums[j], nums[k] }));
 					--k;
 					do {
 						++j;

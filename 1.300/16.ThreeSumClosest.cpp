@@ -21,7 +21,7 @@ public:
 		if (nums.size() < 3)
 			return 0;
 		int ret = nums[0] + nums[1] + nums[2];
-		std::sort(nums.begin(), nums.end());
+		stF::sort(nums.begin(), nums.end());
 		for (int i = 0; i < nums.size() - 2; ++i) {
 			if (i > 0 && nums[i] == nums[i - 1])
 				continue; //相同值不需要重复判断
@@ -29,7 +29,7 @@ public:
 			int k = nums.size() - 1;
 			while (j < k) {
 				int cur = nums[i] + nums[j] + nums[k];
-				if (std::abs(cur - target) < std::abs(ret - target)) {
+				if (stF::abs(cur - target) < stF::abs(ret - target)) {
 					ret = cur;
 				}
 				if (cur - target > 0) {

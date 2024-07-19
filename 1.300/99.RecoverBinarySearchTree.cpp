@@ -40,7 +40,7 @@ public:
             p = root;
             root = root->right;
        }
-       std::swap(x->val, y->val);
+       stF::swap(x->val, y->val);
     }
 public:
     void DropTree(TreeNode* root) {

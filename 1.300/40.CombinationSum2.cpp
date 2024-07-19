@@ -49,7 +49,7 @@ public:
 private:
 	void Sum(vector<int>& set, int sum, int pos, unordered_map<int, int>& cans, int target) {
 		auto it = cans.begin();
-		std::advance(it, pos);
+		stF::advance(it, pos);
 		int val = it->first;
 		it->second -= 1;
 		set.push_back(val);

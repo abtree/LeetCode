@@ -25,8 +25,8 @@ public:
 		if (num1 == "0" || num2 == "0")
 			return "0";
 		//先翻转 好处理
-		std::reverse(num1.begin(), num1.end());
-		std::reverse(num2.begin(), num2.end());
+		stF::reverse(num1.begin(), num1.end());
+		stF::reverse(num2.begin(), num2.end());
 
 		string ret(num1.size() + num2.size(), '0');
 		int i = 0;
@@ -60,7 +60,7 @@ public:
 		//最后处理
 		if (*ret.rbegin() == '0')
 			ret.pop_back();
-		std::reverse(ret.begin(), ret.end());
+		stF::reverse(ret.begin(), ret.end());
 		return ret;
 	}
 

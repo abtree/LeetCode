@@ -13,7 +13,7 @@ public:
         vector<vector<int>> ans;
         if (numRows < 1)
             return ans;
-        ans.push_back(std::move(vector<int>{1}));
+        ans.push_back(stF::move(vector<int>{1}));
         for (int i = 1; i < numRows;++i) {
             ans.push_back(vector<int>{});
             for (int j = 0;j <= i;++j) {

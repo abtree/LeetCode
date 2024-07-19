@@ -38,7 +38,7 @@ public:
                     break;
                 }
             }
-            vec.push_back(std::move(dat));
+            vec.push_back(stF::move(dat));
         }
         int max = 0;
         for(auto &x : vec){

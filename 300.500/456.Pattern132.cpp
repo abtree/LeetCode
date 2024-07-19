@@ -65,8 +65,8 @@ public:
 int main(int argc, char const *argv[])
 {
     Pattern132 cls;
-    cout << std::boolalpha << cls.find132pattern1(vector<int>{1,2,3,4}) << " -> false" << endl;
-    cout << std::boolalpha << cls.find132pattern1(vector<int>{3,1,4,2}) << " -> true" << endl;
-    cout << std::boolalpha << cls.find132pattern1(vector<int>{-1,3,2,0}) << " -> true" << endl;
+    cout << stF::boolalpha << cls.find132pattern1(vector<int>{1,2,3,4}) << " -> false" << endl;
+    cout << stF::boolalpha << cls.find132pattern1(vector<int>{3,1,4,2}) << " -> true" << endl;
+    cout << stF::boolalpha << cls.find132pattern1(vector<int>{-1,3,2,0}) << " -> true" << endl;
     return 0;
 }

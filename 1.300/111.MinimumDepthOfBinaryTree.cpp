@@ -26,7 +26,7 @@ private:
             return depth(root->right, lv + 1);
         if (!root->right)
             return depth(root->left, lv + 1);
-        return std::min(depth(root->left, lv + 1), depth(root->right, lv + 1));
+        return stF::min(depth(root->left, lv + 1), depth(root->right, lv + 1));
     }
 public:
     void DropTree(TreeNode* root) {

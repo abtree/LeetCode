@@ -85,7 +85,7 @@ public:
 				ret = ret * 10 + (c - '0');
 			}
 			break;
-			case ES_END: {
+			case ES_ENF: {
 				return OverZ ? ret : -ret;
 			}
 			break;
@@ -117,7 +117,7 @@ private:
 			return ES_END;
 		}
 			break;
-		case ES_END:
+		case ES_ENF:
 			return ES_END;
 			break;
 		default:

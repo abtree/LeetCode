@@ -56,7 +56,7 @@ public:
         if (e != '0') {
             str.push_back('1'); //最后进位
         }
-        std::reverse(str.begin(), str.end());
+        stF::reverse(str.begin(), str.end());
         return str;
     }
 private:

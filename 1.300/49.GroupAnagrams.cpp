@@ -28,12 +28,12 @@ public:
         unordered_map<string, vector<string>> tmp;
         for (auto& it : strs) {
             string key = it;
-            std::sort(key.begin(), key.end());  //排序后作为key
+            stF::sort(key.begin(), key.end());  //排序后作为key
             tmp[key].push_back(it);
         }
         vector<vector<string>> ret;
         for (auto& it1 : tmp) {
-            ret.push_back(std::move(it1.second));
+            ret.push_back(stF::move(it1.second));
         }
         return ret;
     }
