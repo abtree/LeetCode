@@ -79,7 +79,7 @@ public:
             {
                 ++diff;
             }
-            --dp[x];
+            ++dp[x];
             if (dp[x] == 0)
             {
                 --diff;
@@ -88,7 +88,7 @@ public:
             {
                 ++diff;
             }
-            ++dp[y];
+            --dp[y];
             if (dp[y] == 0)
             {
                 --diff;
